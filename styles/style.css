@@ -39,7 +39,7 @@ header {
     position: absolute;
     z-index: -1;
     top: -150px;
-    right: 150px;
+    right: 0px;
     text-align: right;
     line-height: 61px;
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
