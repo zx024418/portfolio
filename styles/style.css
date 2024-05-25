@@ -7,7 +7,7 @@
 
 .wrapper {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -39,12 +39,22 @@ header {
     position: absolute;
     z-index: -1;
     top: -150px;
-    right: 0px;
+    right: 27px;
     text-align: right;
     line-height: 61px;
     transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
+}
+
+.menu ul li a {
+    font-size: 1.2rem;
+}
+
+.menu ul li a:hover {
+    border-bottom:  5px solid #000;
+    padding-bottom: 5px;
+    transition: 0.2s ease;
 }
 
 .menu.active {
