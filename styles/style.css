@@ -23,6 +23,8 @@ header {
     width: 100%;
     background-color: #fff;
     min-height: 80px;
+    position: relative;
+    z-index: 10; /* Ensure navbar is above other elements */
 }
 
 .navbar h2 {
@@ -37,8 +39,8 @@ header {
 
 .menu {
     position: absolute;
-    z-index: -1;
-    top: -150px;
+    z-index: 5; /* Lower than the navbar */
+    top: -150px; /* Adjust this to initially hide the menu */
     right: 27px;
     text-align: right;
     line-height: 61px;
@@ -52,13 +54,13 @@ header {
 }
 
 .menu ul li a:hover {
-    border-bottom:  5px solid #000;
+    border-bottom: 5px solid #000;
     padding-bottom: 5px;
     transition: 0.2s ease;
 }
 
 .menu.active {
-    top: 80px; /* Adjust this value based on your design */
+    top: 80px; /* Adjust this value to be just below the navbar */
     opacity: 1;
     visibility: visible;
 }
@@ -100,3 +102,9 @@ header {
     color: #000;
 }
 
+/* HERO SECTION STARTS HERE */
+
+.hero-section {
+    background: blue;
+    height: 200px;
+}
