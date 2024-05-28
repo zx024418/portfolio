@@ -29,7 +29,6 @@ header {
 }
 
 .navbar h2 {
-    
     font-weight: 600;
     font-style: normal;
     font-size: 2rem;
@@ -106,10 +105,14 @@ header {
 /* HERO SECTION STARTS HERE */
 
 .hero-section {
-    height: 90vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-content {
+    text-align: center;
 }
 
 .hero-content h3 {
