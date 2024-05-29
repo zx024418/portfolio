@@ -4,6 +4,8 @@
     padding: 0;
     list-style: none;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    background: #164863;
 }
 
 .wrapper {
@@ -22,7 +24,6 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #fff;
     min-height: 80px;
     position: relative;
     z-index: 10; /* Ensure navbar is above other elements */
@@ -104,3 +105,14 @@ header {
 
 /* HERO SECTION STARTS HERE */
 
+.hero-content span {
+    text-decoration: none;
+    color: #DDF2FD;
+    font-size: 1.5rem;
+}
+
+.hero-content h1 a {
+    text-decoration: none;
+    color: #DDF2FD;
+    font-size: 1.5rem;
+}
