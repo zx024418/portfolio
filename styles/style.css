@@ -100,19 +100,6 @@ header {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #000;
 }
 
 /* HERO SECTION STARTS HERE */
-
-.hero-content span {
-    text-decoration: none;
-    color: #DDF2FD;
-    font-size: 1.5rem;
-}
-
-.hero-content h1 a {
-    text-decoration: none;
-    color: #DDF2FD;
-    font-size: 1.5rem;
-}
