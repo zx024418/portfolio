@@ -55,7 +55,7 @@ header {
 }
 
 .menu ul li a:hover {
-    /* border-bottom: 5px solid #000; */
+    border-bottom: 5px solid #000;
     padding-bottom: 5px;
     transition: 0.2s ease;
 }
