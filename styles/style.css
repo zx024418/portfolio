@@ -1,3 +1,8 @@
+:root {
+    --primary: #fff;
+    --secondary: 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,26 +41,20 @@ header {
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-left: 18px;
+    color: var(--primary);
 }
 
-.menu {
-    position: absolute;
-    z-index: 5; /* Lower than the navbar */
-    top: -150px; /* Adjust this to initially hide the menu */
-    right: 27px;
-    text-align: right;
-    line-height: 61px;
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
+.menu ul {
+    display: flex;
 }
 
 .menu ul li a {
     font-size: 1.2rem;
+    color: var(--primary);
 }
 
 .menu ul li a:hover {
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid var(--primary);
     padding-bottom: 5px;
     transition: 0.2s ease;
 }
@@ -68,9 +67,7 @@ header {
 
 .burger-icon > .fa-bars,
 .burger-icon > .fa-x {
-    font-size: 25px;
-    cursor: pointer;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    display: none;
 }
 
 .fa-x {
