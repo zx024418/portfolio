@@ -24,6 +24,12 @@ header {
     line-height: 80px;
 }
 
+.logo h2:hover {
+    font-size: 50px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,6 +52,8 @@ header {
 
 .menu ul {
     display: flex;
+    gap: 50px;
+
 }
 
 .menu ul li a {
@@ -54,9 +62,8 @@ header {
 }
 
 .menu ul li a:hover {
-    border-bottom: 5px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     padding-bottom: 5px;
-    transition: 0.2s ease;
 }
 
 .menu.active {
