@@ -1,69 +1,135 @@
 <script setup>
-
+import ContactForm  from '../components/ContactForm.vue'
 </script>
 
 <template>
-    <div class="wrapper">
-        <div class="HeroSection">
+    <div class="HeroSection">
+        <div class="wrapper flex">
             <div class="HeroInfo">
-                <p>hello i'm arjay</p>
-                <h2>Crafting Digital Experiences that Engage and Inspire</h2>
-                <p>I transform ideas into dynamic websites with a focus on design, functionality, and user experience. Let's build something extraordinary together.</p>
+                <h2>frontend <span>developer</span></h2>
                 <div class="HeroButton">
-                    <a href="#">read more</a>
+                    <a href="#">Hire me</a>
+                    <a href="#">Download CV</a>
                 </div>
+            </div>
+            <div class="HeroImg">
+                <img src="/src/assets/images/hero-img.png" alt="">
             </div>
         </div>
     </div>
+
+    <ContactForm />
 </template>
 
 <style lang="scss">
+
     .HeroSection {
-        background: url(/src/assets/images/bnr-img.jpg);
-        background-size: cover;
+        background: var(--navyBlue);
+        min-height: 1024px;
         height: 100%;
-        min-height: 592px;
 
-        p {
-            font-family: var(--priFont);
-            font-size: 16px;
-            color: var(--white);
-            text-transform: capitalize;
-        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 95px;
 
-        h2 {
-            font-family: var(--secFont);
-            font-size: 45px;
-            color: var(--white);
-        }
 
-        .HeroButton {
-            margin-top: 40px;
+            .HeroInfo {
+                padding: 0 0 0 84px;
+                position: relative;
+                width: 100%;
 
-            a {
-                color: var(--white);
-                text-decoration: none;
-                background: var(--orange);
-                padding: 15px 30px;
-                margin-top: 10px;
-                text-transform: capitalize;
-                font-family: var(--secFont);
-                border-radius: 3px;
+                h2 {
+                    text-transform: uppercase;
+                    font-size: 96px;
+                    font-weight: 700;
+                    font-family: var(--priFont);
+                    line-height: 0.9;
+                    color: var(--aquaBlue);
 
-                &:hover {
-                    background: var(--blue);
-                    color: var(--black);
+                    span {
+                        display: block;
+                    }
+
+                }
+
+                .HeroButton {
+                    margin-top: 57px;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 24px;
+
+                    a {
+                        text-shadow: -1px 5px 2px rgba(0,0,0,0.6);
+                        font-weight: bold;
+                        font-size: 18px;
+                        font-family: var(--priFont);
+
+                        &:hover {
+                            color: rgb(245, 156, 40);
+                            scale: 1.1;
+                            transition: 0.8s ease;
+                        }
+                    }
+
+                    a:first-child {
+                        padding: 10px 32px;
+                        background: var(--aquaBlue);
+                        border-radius: 24px;
+                    }
+
+                    a:last-child {
+                        padding: 10px 70px 0px 32px;
+                        background: var(--black);
+                        border-radius: 24px;
+                        position: relative;
+                    }
+
+                    a:last-child::before {
+                            background: url(/src/assets/images/download-icon.png);
+                            background-repeat: no-repeat;
+                            width: 24px;
+                            height: 24px;
+                            display: block;
+                            position: absolute;
+                            content: '';
+                            right: 38px;
+                    }
                 }
             }
 
+            .HeroInfo::before {
+                    content: '';
+                    display: block;
+                    width: 90px;
+                    height: 221px;
+                    background: url(/src/assets/images/arrow-img.png);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 0;
+                    top: 43px;
+            }
         }
 
-        .HeroInfo {
+        .HeroImg {
             width: 100%;
-            max-width: 600px;
-            padding: 135px 45px 0 60px;
-            height: 100%;
-            min-height: 580px;
+        }
+
+
+
+        // Media Query Starts Here!!!
+        @media (max-width: 1000px) {
+            .flex {
+                flex-direction: column;
+
+                .HeroImg {
+                    width: 100%;
+                    max-width: 580px;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 </style>
