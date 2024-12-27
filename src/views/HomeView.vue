@@ -18,7 +18,7 @@ import ContactForm  from '../components/ContactForm.vue'
         </div>
     </div>
 
-    <ContactForm />
+    <!-- <ContactForm /> -->
 </template>
 
 <style lang="scss">
