@@ -22,11 +22,11 @@ import ContactForm  from '../components/ContactForm.vue'
         <div class="accordion container" id="accordionExample">
             <div class="accordion-item mt-5 rounded-3">
                 <h2 class="accordion-header">
-                <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Accordion Item #1
                 </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
                 </div>
@@ -102,13 +102,13 @@ import ContactForm  from '../components/ContactForm.vue'
                     gap: 24px;
 
                     a {
-                        text-shadow: -1px 5px 2px rgba(0,0,0,0.6);
                         font-weight: bold;
                         font-size: 18px;
                         font-family: var(--priFont);
 
                         &:hover {
                             color: rgb(245, 156, 40);
+                            text-shadow: -1px 5px 2px rgba(0,0,0,0.6);
                             scale: 1.1;
                             transition: 0.8s ease;
                         }
@@ -121,7 +121,7 @@ import ContactForm  from '../components/ContactForm.vue'
                     }
 
                     a:last-child {
-                        padding: 10px 70px 0px 32px;
+                        padding: 10px 70px 10px 32px;
                         background: var(--black);
                         border-radius: 24px;
                         position: relative;
@@ -155,18 +155,31 @@ import ContactForm  from '../components/ContactForm.vue'
 
         .HeroImg {
             width: 100%;
+            display: block;
+            position: relative;
         }
 
         // Media Query Starts Here!!!
-        @media (max-width: 1000px) {
+        @media (max-width: 1280px) {
             .flex {
-                flex-direction: column;
+
+                .HeroInfo::before {
+                    display: none;
+                }
+
+                .HeroInfo {
+                    padding: 0 0 0 40px;
+
+                    h2 {
+                        font-size: 50px;
+                    }
+                }
 
                 .HeroImg {
-                    width: 100%;
-                    max-width: 580px;
-                    margin: 0 auto;
+                img {
+                    max-width: 400px;
                 }
+            }
             }
         }
     }
